@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regalo Especial</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background: url('https://p4.wallpaperbetter.com/wallpaper/306/24/32/art-background-hearts-kiss-wallpaper-preview.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .container {
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            display: inline-block;
+        }
+        h1 {
+            color: #ff6f61;
+        }
+        input[type="text"] {
+            font-size: 1.2em;
+            padding: 10px;
+            margin: 20px 0;
+            border: 2px solid #ff6f61;
+            border-radius: 5px;
+        }
+        button {
+            font-size: 1.2em;
+            padding: 10px 20px;
+            color: #fff;
+            background-color: #ff6f61;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #e55a50;
+        }
+        audio {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <audio controls autoplay loop>
+        <source src="tu-cancion.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+    <div class="container">
+        <h1>¡Bienvenida a tu regalo especial!</h1>
+        <p>Para descubrirlo, ingresa la fecha de nuestro primer aniversario:</p>
+        <form id="dateForm">
+            <input type="text" id="dateInput" placeholder="DD-MM-YYYY" required>
+            <button type="submit">Descubrir</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById('dateForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const inputDate = document.getElementById('dateInput').value;
+            const correctDate = '15-08-2024';
+            if (inputDate === correctDate) {
+                window.location.href = 'carta.html';
+            } else {
+                alert('Fecha incorrecta. Inténtalo de nuevo.');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta Especial</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background: url('https://p4.wallpaperbetter.com/wallpaper/306/24/32/art-background-hearts-kiss-wallpaper-preview.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .container {
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            display: inline-block;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        h1 {
+            color: #ff6f61;
+        }
+        p {
+            font-size: 1.2em;
+            margin: 20px 0;
+        }
+        .quote {
+            margin-top: 30px;
+            font-size: 1.2em;
+            color: #555;
+        }
+        .heart {
+            font-size: 3em;
+            color: #ff6f61;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        audio {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <audio controls autoplay loop>
+        <source src="tu-cancion.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+    <div class="container">
+        <h1>¡Feliz Primer Mes, mi amor!</h1>
+        <p>No me salen las palabras para decirte lo feliz que estoy. Sé que para ti es un día especial, no quiere decir que para mí no, porque también lo es. No tengo palabras para decirte lo feliz que me haces porque siento que al decírtelo tantas veces quizás te aburras jfkasj, pero bueno hoy celebramos nuestro primer mes juntos, y no puedo evitar sentirme inmensamente agradecido y feliz por todo lo que hemos vivido en tan poco tiempo. Desde el primer momento, has llenado mi vida de alegría y momentos inolvidables. Cada día a tu lado me hace tan feliz, y me emociona pensar en todo lo que nos espera por vivir juntos. Eres una persona increíble, y no puedo esperar a seguir construyendo muchos más recuerdos a tu lado. No te olvides que eres el amor de mi vida, lo eres y siempre lo serás a pesar de todo lo que pase de aquí en adelante, te amo con todo mi corazón, mi niña bella. Gracias por hacerme tan feliz y por ser tú. ¡Feliz primer mes, mi amor! Esto es solo el comienzo de algo maravilloso y ojalá sea para siempre.</p>
+        <div class="heart" onclick="changePage()">❤️</div>
+        <div class="quote">
+            <p id="quoteText">Haz clic en el corazón para ver más.</p>
+        </div>
+    </div>
+    <script>
+        let quoteIndex = 1;
+
+        function changePage() {
+            quoteIndex = (quoteIndex % 3) + 1; // Cambia entre 1, 2 y 3
+
+            let quoteText;
+            switch (quoteIndex) {
+                case 1:
+                    quoteText = "No es lo que siento por ti, es lo que no siento por nadie más.";
+                    break;
+                case 2:
+                    quoteText = "Tampoco es lo que no hago por ti, sino lo que no hago por nadie más.";
+                    break;
+                case 3:
+                    quoteText = "Eres tú y solamente tú.";
+                    break;
+            }
+
+            document.getElementById('quoteText').innerText = quoteText;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frase Especial</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background: url('https://p4.wallpaperbetter.com/wallpaper/306/24/32/art-background-hearts-kiss-wallpaper-preview.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .container {
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            display: inline-block;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        h1 {
+            color: #ff6f61;
+        }
+        p {
+            font-size: 1.2em;
+            margin: 20px 0;
+        }
+        .heart {
+            font-size: 3em;
+            color: #ff6f61;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        audio {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <audio controls autoplay loop>
+        <source src="tu-cancion.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+    <div class="container">
+        <h1>Tampoco es lo que no hago por ti, sino lo que no hago por nadie más.</h1>
+        <div class="heart" onclick="window.location.href='frase3.html'">❤️</div>
+    </div>
+</body>
+</html>
